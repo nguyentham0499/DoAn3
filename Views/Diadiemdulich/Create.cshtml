@@ -1,0 +1,37 @@
+@model DoAn3.Models.Diadiemdulich
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row mt">
+            <div class="col-lg-12">
+                <h4>Tạo mới</h4>
+                <div class="form-panel">
+                    <form asp-action="Create">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group ">
+                            <label asp-for="DddlMa" class="control-label">Mã địa điểm</label>
+                            <input asp-for="DddlMa" class="form-control" />
+                            <span asp-validation-for="DddlMa" class="text-danger"></span>
+                        </div>
+                        <div class="form-group ">
+                            <label asp-for="DddlTen" class="control-label">Tên địa điểm</label>
+                            <input asp-for="DddlTen" class="form-control" />
+                            <span asp-validation-for="DddlTen" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <div >
+                                <input type="submit" value="Tạo mới" class="btn btn-primary"/>
+                                <a asp-action="Index" class="btn btn-default"><i class="fa fa-rotate-left"></i></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</section>

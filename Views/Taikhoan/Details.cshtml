@@ -1,0 +1,46 @@
+@model DoAn3.Models.Taikhoan
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<section id="main-content">
+  <section class="wrapper">
+    <h3>Chi tiết tài khoản</h3>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="content-panel">
+          <table class="table table-striped table-advance table-hover">
+            <thead>
+              <tr>
+                <th>Mã tài khoản</th>
+                <th>Email</th>
+                <th>Mật khẩu</th>
+                <th>Họ tên</th>
+                <th></th>
+              </tr>
+                <tr>
+                    <td>
+                         @Html.DisplayFor(model => model.TkMa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.TkEmail)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(model => model.TkMatkhau)
+                    </td>
+                    <td>
+                         @Html.DisplayFor(model => model.TkHoten)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@Model.TkMa"class="btn btn-primary"><i class="fa fa-pencil"></i></a> |
+                        <a asp-action="Index" class="btn btn-default "><i class="fa fa-rotate-left"></i></a>
+                    </td>
+                </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

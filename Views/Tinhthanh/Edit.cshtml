@@ -1,0 +1,39 @@
+@model DoAn3.Models.Tinhthanh
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<section id="main-content">
+    <section class="wrapper">
+        <h3><i class="fa fa-angle-right"></i>Chỉnh sửa</h3>
+            <div class="row mt">
+                    <div class="col-lg-12">
+                        <h4><i class="fa fa-angle-right"></i>Tỉnh thành</h4>
+                        <div class="form-panel">
+                            <form asp-action="Edit">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <input type="hidden" asp-for="TtMa" />
+                                <div class="form-group ">
+                                    <label asp-for="TtMa" class="control-label">Mã tỉnh thành</label>
+                                    <input asp-for="TtMa" class="form-control" />
+                                    <span asp-validation-for="TtMa" class="text-danger"></span>
+                                </div>
+                                <div class="form-group ">
+                                    <label asp-for="TtTen" class="control-label">Tên tỉnh thành</label>
+                                    <input asp-for="TtTen" class="form-control" />
+                                    <span asp-validation-for="TtTen" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <div>
+                                    <input type="submit" value="Lưu" class="btn btn-primary"/>
+                                    <a asp-action="Index" class="btn btn-default"><i class="fa fa-rotate-left"></i></a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</section>

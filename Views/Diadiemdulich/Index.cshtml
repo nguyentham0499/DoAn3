@@ -1,0 +1,47 @@
+@model IEnumerable<DoAn3.Models.Diadiemdulich>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<section id="main-content">
+  <section class="wrapper">
+    <h3>Địa điểm du lịch</h3>
+    <p>
+      <a asp-action="Create">Tạo mới</a>
+    </p>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="content-panel">
+          <table class="table table-striped table-advance table-hover">
+            <thead>
+              <tr>
+                <th data-width="100px">Mã địa điểm</th>
+                <th data-width="150px">Tên địa điểm</th>
+                <th data-width="100px"></th>
+                      </tr>
+            </thead>
+            <tbody>
+              @foreach (var item in Model)
+                            {
+                    <tr>
+                      <td>
+                        @Html.DisplayFor(modelItem => item.DddlMa)
+                      </td>
+                      <td>
+                        @Html.DisplayFor(modelItem => item.DddlTen)
+                              </td>
+                      <td>
+                        <a asp-action="Details" asp-route-id="@item.DddlMa" class="btn btn-success btn-xs"><i class="fa fa-check"></i></a> |
+                        <a asp-action="Edit" asp-route-id="@item.DddlMa" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></a> |
+                        <a asp-action="Delete" asp-route-id="@item.DddlMa" class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></a>
+                      </td>
+                    </tr>
+                            }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

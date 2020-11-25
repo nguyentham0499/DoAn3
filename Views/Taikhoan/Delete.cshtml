@@ -1,0 +1,47 @@
+@model DoAn3.Models.Taikhoan
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<section id="main-content">
+  <section class="wrapper">
+    <h3>Bạn chắc chắn muốn xóa?</h3>
+    <div class="row">
+      <h4>Tài khoản</h4>
+      <div class="col-md-12">
+        <div class="content-panel">
+          <table class="table table-striped table-advance table-hover">
+            <thead>
+              <tr>
+                <th>Mã tài khoản</th>
+                <th>Email</th>
+                <th>Mật khẩu</th>
+                <th>Họ tên</th>
+              </tr>
+                <tr>
+                    <td>
+                    @Html.DisplayFor(model => model.TkMa)
+                  </td>
+                  <td>
+                    @Html.DisplayFor(model => model.TkEmail)
+                  </td>
+                  <td>
+                    @Html.DisplayFor(model => model.TkMatkhau)
+                  </td>
+                  <td>
+                    @Html.DisplayFor(model => model.TkHoten)
+                  </td>
+                </tr>
+            </thead>
+          </table>
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="TkMa" />
+                <input type="submit" value="Xóa" class="btn btn-danger" /> |
+                <a asp-action="Index" class="btn btn-default"><i class="fa fa-rotate-left"></i></a>
+            </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
